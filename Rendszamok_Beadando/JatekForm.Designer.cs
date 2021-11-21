@@ -86,12 +86,16 @@ namespace Rendszamok_Beadando {
       // 
       // tippTextBox
       // 
+      this.tippTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+      this.tippTextBox.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
       this.tippTextBox.Location = new System.Drawing.Point(12, 12);
       this.tippTextBox.Multiline = true;
       this.tippTextBox.Name = "tippTextBox";
       this.tippTextBox.Size = new System.Drawing.Size(776, 190);
       this.tippTextBox.TabIndex = 6;
+      this.tippTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
       this.tippTextBox.Visible = false;
+      this.tippTextBox.TextChanged += new System.EventHandler(this.tippTextBox_TextChanged);
       // 
       // johetAtippelesButton
       // 

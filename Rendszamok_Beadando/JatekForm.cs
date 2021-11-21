@@ -105,5 +105,12 @@ namespace Rendszamok_Beadando {
       Application.Exit();
     }
 
+    private void tippTextBox_TextChanged(object sender, EventArgs e) {
+      if (tippTextBox.Text.Length > 7) {
+        MessageBox.Show("Maximum 7 karakter írható be!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        tippTextBox.Text = tippTextBox.Text.Substring(0, 7);
+        tippTextBox.SelectionStart = 7;
+      }
+    }
   }
 }

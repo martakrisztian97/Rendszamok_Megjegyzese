@@ -49,6 +49,7 @@ namespace Rendszamok_Beadando {
       this.mennyitTextBox.TabIndex = 1;
       this.mennyitTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
       this.mennyitTextBox.TextChanged += new System.EventHandler(this.mennyitTextBox_TextChanged);
+      this.mennyitTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mennyitTextBox_KeyDown);
       // 
       // inditasButton
       // 

@@ -42,5 +42,21 @@ namespace Rendszamok_Beadando {
         mennyitTextBox.Text = "";
       }
     }
+
+    private void mennyitTextBox_KeyDown(object sender, KeyEventArgs e) {
+      if (e.KeyCode == Keys.Enter) {
+        try {
+          int mennyit = int.Parse(mennyitTextBox.Text);
+          this.Hide();
+          JatekForm jatekForm = new JatekForm(mennyit);
+          jatekForm.Mennyit = mennyit;
+          jatekForm.Show();
+        } catch {
+          if (mennyitTextBox.Text == "") {
+            MessageBox.Show("Mező kitöltése kötelező!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          }
+        }
+      }
+    }
   }
 }

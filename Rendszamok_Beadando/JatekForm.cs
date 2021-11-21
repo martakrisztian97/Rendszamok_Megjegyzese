@@ -15,9 +15,8 @@ namespace Rendszamok_Beadando {
 
     public int Mennyit { get; set; }
     
-    //String[] rendszamok;
     List<String> rendszamok = new List<String>();
-    int kattint = 0;
+    List<String> tippek = new List<String>();
 
     public String rendszamSorsol() {
       String rendszam = "";
@@ -50,35 +49,6 @@ namespace Rendszamok_Beadando {
     }
 
     private void kovetkezoButton_Click(object sender, EventArgs e) {
-      /*kattint++;
-
-      if (Mennyit == 1) {
-        kovetkezoButton.Visible = false;
-        rendszamPictureBox.Visible = false;
-        rendszamLabel.Visible = false;
-        tippTextBox.Visible = true;
-        tippelekButton.Visible = true;
-      }
-
-      if (Mennyit != 1) {
-        rendszamok[kattint] = rendszamSorsol();
-        rendszamLabel.Text = rendszamok[kattint];
-        label1.Text += rendszamok[kattint]+"\n";
-      }
-
-      if (kattint == Mennyit-1) {
-        kovetkezoButton.Text = "JÖHET A TIPPELÉS!";
-      }
-
-      // Ha megkaptunk minden rendszámot.
-      if (kattint == Mennyit) {
-        kovetkezoButton.Visible = false;
-        rendszamPictureBox.Visible = false;
-        rendszamLabel.Visible = false;
-        tippTextBox.Visible = true;
-        tippelekButton.Visible = true;
-      }*/
-
       if (rendszamok.Count < Mennyit) {
         int i = rendszamok.Count;
         rendszamok.Add(rendszamSorsol());
@@ -100,7 +70,6 @@ namespace Rendszamok_Beadando {
       tippelekButton.Visible = true;
     }
 
-    
     private void JatekForm_FormClosed(object sender, FormClosedEventArgs e) {
       Application.Exit();
     }
@@ -110,6 +79,20 @@ namespace Rendszamok_Beadando {
         MessageBox.Show("Maximum 7 karakter írható be!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
         tippTextBox.Text = tippTextBox.Text.Substring(0, 7);
         tippTextBox.SelectionStart = 7;
+      }
+    }
+
+    private void tippelekButton_Click(object sender, EventArgs e) {
+      if (tippek.Count < Mennyit) {
+        int i = tippek.Count;
+        tippek.Add(tippTextBox.Text);
+        label2.Text += tippek[i]+"\n";
+        tippTextBox.Text = "";
+      }
+
+      if (tippek.Count == Mennyit) {
+        tippTextBox.Visible = false;
+        tippelekButton.Visible = false;
       }
     }
   }

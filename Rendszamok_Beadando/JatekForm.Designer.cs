@@ -32,6 +32,7 @@ namespace Rendszamok_Beadando {
       this.label1 = new System.Windows.Forms.Label();
       this.tippTextBox = new System.Windows.Forms.TextBox();
       this.johetAtippelesButton = new System.Windows.Forms.Button();
+      this.label2 = new System.Windows.Forms.Label();
       ((System.ComponentModel.ISupportInitialize)(this.rendszamPictureBox)).BeginInit();
       this.SuspendLayout();
       // 
@@ -75,6 +76,7 @@ namespace Rendszamok_Beadando {
       this.tippelekButton.Text = "TIPPELEK";
       this.tippelekButton.UseVisualStyleBackColor = true;
       this.tippelekButton.Visible = false;
+      this.tippelekButton.Click += new System.EventHandler(this.tippelekButton_Click);
       // 
       // label1
       // 
@@ -108,11 +110,20 @@ namespace Rendszamok_Beadando {
       this.johetAtippelesButton.Visible = false;
       this.johetAtippelesButton.Click += new System.EventHandler(this.johetAtippelesButton_Click);
       // 
+      // label2
+      // 
+      this.label2.AutoSize = true;
+      this.label2.Location = new System.Drawing.Point(626, 297);
+      this.label2.Name = "label2";
+      this.label2.Size = new System.Drawing.Size(0, 20);
+      this.label2.TabIndex = 8;
+      // 
       // JatekForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
+      this.Controls.Add(this.label2);
       this.Controls.Add(this.johetAtippelesButton);
       this.Controls.Add(this.tippTextBox);
       this.Controls.Add(this.label1);
@@ -142,5 +153,6 @@ namespace Rendszamok_Beadando {
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.TextBox tippTextBox;
     private System.Windows.Forms.Button johetAtippelesButton;
+    private System.Windows.Forms.Label label2;
   }
 }

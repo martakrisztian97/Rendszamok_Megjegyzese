@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace Rendszamok_Beadando {
@@ -17,6 +18,9 @@ namespace Rendszamok_Beadando {
     
     List<String> rendszamok = new List<String>();
     List<String> tippek = new List<String>();
+    System.Timers.Timer t;
+    int h, m, s;
+    String felhasznaltIdo;
 
     public String rendszamSorsol() {
       String rendszam = "";
@@ -93,7 +97,33 @@ namespace Rendszamok_Beadando {
       if (tippek.Count == Mennyit) {
         tippTextBox.Visible = false;
         tippelekButton.Visible = false;
+        t.Stop();
+        felhasznaltIdo = timerLabel.Text;
       }
+    }
+
+    private void JatekForm_Load(object sender, EventArgs e) {
+      t = new System.Timers.Timer();
+      t.Interval = 1000; // 1 másodperc
+      t.Elapsed += OnTimeEvent;
+      t.Start();
+    }
+
+    private void OnTimeEvent(object sender, ElapsedEventArgs e) {
+      Invoke(new Action(() =>
+      {
+        s += 1;
+        if (s == 60) {
+          s = 0;
+          m += 1;
+        }
+
+        if (m == 60) {
+          m = 0;
+          h += 1;
+        }
+        timerLabel.Text = string.Format("{0}:{1}:{2}", h.ToString().PadLeft(2, '0'), m.ToString().PadLeft(2, '0'), s.ToString().PadLeft(2, '0'));
+      }));
     }
   }
 }

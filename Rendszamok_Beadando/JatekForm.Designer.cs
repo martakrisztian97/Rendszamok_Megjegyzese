@@ -33,6 +33,7 @@ namespace Rendszamok_Beadando {
       this.tippTextBox = new System.Windows.Forms.TextBox();
       this.johetAtippelesButton = new System.Windows.Forms.Button();
       this.label2 = new System.Windows.Forms.Label();
+      this.timerLabel = new System.Windows.Forms.Label();
       ((System.ComponentModel.ISupportInitialize)(this.rendszamPictureBox)).BeginInit();
       this.SuspendLayout();
       // 
@@ -118,11 +119,23 @@ namespace Rendszamok_Beadando {
       this.label2.Size = new System.Drawing.Size(0, 20);
       this.label2.TabIndex = 8;
       // 
+      // timerLabel
+      // 
+      this.timerLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+      this.timerLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      this.timerLabel.Location = new System.Drawing.Point(12, 210);
+      this.timerLabel.Name = "timerLabel";
+      this.timerLabel.Size = new System.Drawing.Size(125, 50);
+      this.timerLabel.TabIndex = 10;
+      this.timerLabel.Text = "00:00:00";
+      this.timerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+      // 
       // JatekForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
+      this.Controls.Add(this.timerLabel);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.johetAtippelesButton);
       this.Controls.Add(this.tippTextBox);
@@ -138,6 +151,7 @@ namespace Rendszamok_Beadando {
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "Rendszámok";
       this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.JatekForm_FormClosed);
+      this.Load += new System.EventHandler(this.JatekForm_Load);
       ((System.ComponentModel.ISupportInitialize)(this.rendszamPictureBox)).EndInit();
       this.ResumeLayout(false);
       this.PerformLayout();
@@ -154,5 +168,6 @@ namespace Rendszamok_Beadando {
     private System.Windows.Forms.TextBox tippTextBox;
     private System.Windows.Forms.Button johetAtippelesButton;
     private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.Label timerLabel;
   }
 }

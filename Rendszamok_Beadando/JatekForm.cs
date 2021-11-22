@@ -130,6 +130,12 @@ namespace Rendszamok_Beadando {
       Application.Exit();
     }
 
+    private void ujJatekButton_Click(object sender, EventArgs e) {
+      kerdesForm ujJatekForm = new kerdesForm();
+      ujJatekForm.Show();
+      this.Hide();
+    }
+
     private void JatekForm_Load(object sender, EventArgs e) {
       t = new System.Timers.Timer();
       t.Interval = 1000; // 1 másodperc

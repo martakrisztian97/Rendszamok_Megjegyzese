@@ -157,6 +157,7 @@ namespace Rendszamok_Beadando {
       this.ujJatekButton.Text = "ÚJ JÁTÉK!";
       this.ujJatekButton.UseVisualStyleBackColor = true;
       this.ujJatekButton.Visible = false;
+      this.ujJatekButton.Click += new System.EventHandler(this.ujJatekButton_Click);
       // 
       // kilepesButton
       // 

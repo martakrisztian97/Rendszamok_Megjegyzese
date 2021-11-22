@@ -20,7 +20,6 @@ namespace Rendszamok_Beadando {
     List<String> tippek = new List<String>();
     System.Timers.Timer t;
     int h, m, s;
-    String felhasznaltIdo;
 
     public String rendszamSorsol() {
       String rendszam = "";
@@ -33,6 +32,22 @@ namespace Rendszamok_Beadando {
       int szam3 = rand.Next(10);
       rendszam += betu1+""+betu2+betu3+"-"+szam1+szam2+szam3;
       return rendszam;
+    }
+
+    public void ertekeles() {
+      String felhasznaltIdo;
+      int helyes = 0;
+      for (int i = 0; i < Mennyit; i++) {
+        if (rendszamok[i].Equals(tippek[i])) {
+          helyes++;
+        }
+      }
+      float szazalek = (float)helyes/(float)Mennyit;
+      felhasznaltIdo = timerLabel.Text;
+      ertekelesLabel.Text = "Rendszámok: "+Mennyit;
+      ertekelesLabel.Text += "\nTalálat: "+helyes;
+      ertekelesLabel.Text += "\nTalálati arány: "+szazalek*100+"%";
+      ertekelesLabel.Text += "\nFelhasznált idő: "+felhasznaltIdo;
     }
 
     public JatekForm() {
@@ -92,14 +107,27 @@ namespace Rendszamok_Beadando {
         tippek.Add(tippTextBox.Text);
         label2.Text += tippek[i]+"\n";
         tippTextBox.Text = "";
+        if (rendszamok[i].Equals(tippek[i])) {
+          MessageBox.Show("Helyes tipp!", "Értékelés", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        } else {
+          MessageBox.Show("Hibás tipp! A helyes rendszám: "+rendszamok[i], "Értékelés", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
       }
 
       if (tippek.Count == Mennyit) {
         tippTextBox.Visible = false;
         tippelekButton.Visible = false;
         t.Stop();
-        felhasznaltIdo = timerLabel.Text;
+        timerLabel.Visible = false;
+        ertekelesLabel.Visible = true;
+        ujJatekButton.Visible = true;
+        kilepesButton.Visible = true;
+        ertekeles();
       }
+    }
+
+    private void kilepesButton_Click(object sender, EventArgs e) {
+      Application.Exit();
     }
 
     private void JatekForm_Load(object sender, EventArgs e) {

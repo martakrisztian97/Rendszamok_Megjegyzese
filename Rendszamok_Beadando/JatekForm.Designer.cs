@@ -34,6 +34,9 @@ namespace Rendszamok_Beadando {
       this.johetAtippelesButton = new System.Windows.Forms.Button();
       this.label2 = new System.Windows.Forms.Label();
       this.timerLabel = new System.Windows.Forms.Label();
+      this.ertekelesLabel = new System.Windows.Forms.Label();
+      this.ujJatekButton = new System.Windows.Forms.Button();
+      this.kilepesButton = new System.Windows.Forms.Button();
       ((System.ComponentModel.ISupportInitialize)(this.rendszamPictureBox)).BeginInit();
       this.SuspendLayout();
       // 
@@ -133,11 +136,48 @@ namespace Rendszamok_Beadando {
       this.timerLabel.Text = "00:00:00";
       this.timerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
       // 
+      // ertekelesLabel
+      // 
+      this.ertekelesLabel.BackColor = System.Drawing.SystemColors.Control;
+      this.ertekelesLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      this.ertekelesLabel.Location = new System.Drawing.Point(250, 12);
+      this.ertekelesLabel.Name = "ertekelesLabel";
+      this.ertekelesLabel.Size = new System.Drawing.Size(300, 190);
+      this.ertekelesLabel.TabIndex = 11;
+      this.ertekelesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+      this.ertekelesLabel.Visible = false;
+      // 
+      // ujJatekButton
+      // 
+      this.ujJatekButton.Cursor = System.Windows.Forms.Cursors.Hand;
+      this.ujJatekButton.Location = new System.Drawing.Point(250, 346);
+      this.ujJatekButton.Name = "ujJatekButton";
+      this.ujJatekButton.Size = new System.Drawing.Size(140, 50);
+      this.ujJatekButton.TabIndex = 12;
+      this.ujJatekButton.Text = "ÚJ JÁTÉK!";
+      this.ujJatekButton.UseVisualStyleBackColor = true;
+      this.ujJatekButton.Visible = false;
+      // 
+      // kilepesButton
+      // 
+      this.kilepesButton.Cursor = System.Windows.Forms.Cursors.Hand;
+      this.kilepesButton.Location = new System.Drawing.Point(400, 346);
+      this.kilepesButton.Name = "kilepesButton";
+      this.kilepesButton.Size = new System.Drawing.Size(140, 50);
+      this.kilepesButton.TabIndex = 13;
+      this.kilepesButton.Text = "KILÉPÉS";
+      this.kilepesButton.UseVisualStyleBackColor = true;
+      this.kilepesButton.Visible = false;
+      this.kilepesButton.Click += new System.EventHandler(this.kilepesButton_Click);
+      // 
       // JatekForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
+      this.Controls.Add(this.kilepesButton);
+      this.Controls.Add(this.ujJatekButton);
+      this.Controls.Add(this.ertekelesLabel);
       this.Controls.Add(this.timerLabel);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.johetAtippelesButton);
@@ -172,5 +212,8 @@ namespace Rendszamok_Beadando {
     private System.Windows.Forms.Button johetAtippelesButton;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label timerLabel;
+    private System.Windows.Forms.Label ertekelesLabel;
+    private System.Windows.Forms.Button ujJatekButton;
+    private System.Windows.Forms.Button kilepesButton;
   }
 }

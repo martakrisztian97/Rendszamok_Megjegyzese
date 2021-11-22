@@ -100,6 +100,11 @@ namespace Rendszamok_Beadando {
         tippTextBox.Text = tippTextBox.Text.Substring(0, 7);
         tippTextBox.SelectionStart = 7;
       }
+
+      if (tippTextBox.Text.Length == 3) {
+        tippTextBox.Text += '-';
+        tippTextBox.SelectionStart = 4;
+      }
     }
 
     private void tippelekButton_Click(object sender, EventArgs e) {

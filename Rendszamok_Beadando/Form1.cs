@@ -23,7 +23,7 @@ namespace Rendszamok_Beadando {
         jatekForm.Show();
       } catch {
         if (mennyitTextBox.Text == "") {
-          MessageBox.Show("Mező kitöltése kötelező!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          MessageBox.Show("Mező kitöltése kötelező!", "Hiba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
       }
     }
@@ -32,12 +32,12 @@ namespace Rendszamok_Beadando {
       try {
         int mennyit = int.Parse(mennyitTextBox.Text);
         if (mennyit < 1 || mennyit > 5) {
-          MessageBox.Show("1 és 5 közötti egész számot adjon meg!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          MessageBox.Show("1 és 5 közötti egész számot adjon meg!", "Hiba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
           mennyitTextBox.Text = "";
         }
       } catch (FormatException) {
         if (mennyitTextBox.Text != "") {
-          MessageBox.Show("Egész számot adjon meg!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          MessageBox.Show("Egész számot adjon meg!", "Hiba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         mennyitTextBox.Text = "";
       }

@@ -29,21 +29,20 @@ namespace Rendszamok_Beadando {
       this.rendszamLabel = new System.Windows.Forms.Label();
       this.kovetkezoButton = new System.Windows.Forms.Button();
       this.tippelekButton = new System.Windows.Forms.Button();
-      this.label1 = new System.Windows.Forms.Label();
       this.tippTextBox = new System.Windows.Forms.TextBox();
       this.johetAtippelesButton = new System.Windows.Forms.Button();
-      this.label2 = new System.Windows.Forms.Label();
       this.timerLabel = new System.Windows.Forms.Label();
       this.ertekelesLabel = new System.Windows.Forms.Label();
       this.ujJatekButton = new System.Windows.Forms.Button();
       this.kilepesButton = new System.Windows.Forms.Button();
+      this.tajekoztatoLabel = new System.Windows.Forms.Label();
       ((System.ComponentModel.ISupportInitialize)(this.rendszamPictureBox)).BeginInit();
       this.SuspendLayout();
       // 
       // rendszamPictureBox
       // 
       this.rendszamPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("rendszamPictureBox.Image")));
-      this.rendszamPictureBox.Location = new System.Drawing.Point(12, 12);
+      this.rendszamPictureBox.Location = new System.Drawing.Point(12, 50);
       this.rendszamPictureBox.Name = "rendszamPictureBox";
       this.rendszamPictureBox.Size = new System.Drawing.Size(776, 190);
       this.rendszamPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -54,7 +53,7 @@ namespace Rendszamok_Beadando {
       // 
       this.rendszamLabel.BackColor = System.Drawing.Color.White;
       this.rendszamLabel.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-      this.rendszamLabel.Location = new System.Drawing.Point(120, 25);
+      this.rendszamLabel.Location = new System.Drawing.Point(120, 63);
       this.rendszamLabel.Name = "rendszamLabel";
       this.rendszamLabel.Size = new System.Drawing.Size(655, 160);
       this.rendszamLabel.TabIndex = 2;
@@ -64,7 +63,7 @@ namespace Rendszamok_Beadando {
       // kovetkezoButton
       // 
       this.kovetkezoButton.Cursor = System.Windows.Forms.Cursors.Hand;
-      this.kovetkezoButton.Location = new System.Drawing.Point(325, 250);
+      this.kovetkezoButton.Location = new System.Drawing.Point(325, 300);
       this.kovetkezoButton.Name = "kovetkezoButton";
       this.kovetkezoButton.Size = new System.Drawing.Size(150, 50);
       this.kovetkezoButton.TabIndex = 3;
@@ -75,7 +74,7 @@ namespace Rendszamok_Beadando {
       // tippelekButton
       // 
       this.tippelekButton.Cursor = System.Windows.Forms.Cursors.Hand;
-      this.tippelekButton.Location = new System.Drawing.Point(325, 250);
+      this.tippelekButton.Location = new System.Drawing.Point(325, 300);
       this.tippelekButton.Name = "tippelekButton";
       this.tippelekButton.Size = new System.Drawing.Size(150, 50);
       this.tippelekButton.TabIndex = 4;
@@ -84,22 +83,14 @@ namespace Rendszamok_Beadando {
       this.tippelekButton.Visible = false;
       this.tippelekButton.Click += new System.EventHandler(this.tippelekButton_Click);
       // 
-      // label1
-      // 
-      this.label1.AutoSize = true;
-      this.label1.Location = new System.Drawing.Point(57, 337);
-      this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(0, 20);
-      this.label1.TabIndex = 5;
-      // 
       // tippTextBox
       // 
       this.tippTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
       this.tippTextBox.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-      this.tippTextBox.Location = new System.Drawing.Point(12, 12);
+      this.tippTextBox.Location = new System.Drawing.Point(12, 53);
       this.tippTextBox.Multiline = true;
       this.tippTextBox.Name = "tippTextBox";
-      this.tippTextBox.Size = new System.Drawing.Size(776, 190);
+      this.tippTextBox.Size = new System.Drawing.Size(776, 170);
       this.tippTextBox.TabIndex = 6;
       this.tippTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
       this.tippTextBox.Visible = false;
@@ -108,7 +99,7 @@ namespace Rendszamok_Beadando {
       // johetAtippelesButton
       // 
       this.johetAtippelesButton.Cursor = System.Windows.Forms.Cursors.Hand;
-      this.johetAtippelesButton.Location = new System.Drawing.Point(325, 250);
+      this.johetAtippelesButton.Location = new System.Drawing.Point(325, 300);
       this.johetAtippelesButton.Name = "johetAtippelesButton";
       this.johetAtippelesButton.Size = new System.Drawing.Size(150, 50);
       this.johetAtippelesButton.TabIndex = 7;
@@ -117,19 +108,11 @@ namespace Rendszamok_Beadando {
       this.johetAtippelesButton.Visible = false;
       this.johetAtippelesButton.Click += new System.EventHandler(this.johetAtippelesButton_Click);
       // 
-      // label2
-      // 
-      this.label2.AutoSize = true;
-      this.label2.Location = new System.Drawing.Point(626, 297);
-      this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(0, 20);
-      this.label2.TabIndex = 8;
-      // 
       // timerLabel
       // 
       this.timerLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
       this.timerLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-      this.timerLabel.Location = new System.Drawing.Point(12, 210);
+      this.timerLabel.Location = new System.Drawing.Point(12, 250);
       this.timerLabel.Name = "timerLabel";
       this.timerLabel.Size = new System.Drawing.Size(125, 50);
       this.timerLabel.TabIndex = 10;
@@ -171,19 +154,29 @@ namespace Rendszamok_Beadando {
       this.kilepesButton.Visible = false;
       this.kilepesButton.Click += new System.EventHandler(this.kilepesButton_Click);
       // 
+      // tajekoztatoLabel
+      // 
+      this.tajekoztatoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.tajekoztatoLabel.Location = new System.Drawing.Point(0, 0);
+      this.tajekoztatoLabel.Name = "tajekoztatoLabel";
+      this.tajekoztatoLabel.Size = new System.Drawing.Size(800, 47);
+      this.tajekoztatoLabel.TabIndex = 14;
+      this.tajekoztatoLabel.Text = "1. rendszám";
+      this.tajekoztatoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+      this.tajekoztatoLabel.Visible = false;
+      // 
       // JatekForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
+      this.Controls.Add(this.tajekoztatoLabel);
       this.Controls.Add(this.kilepesButton);
       this.Controls.Add(this.ujJatekButton);
       this.Controls.Add(this.ertekelesLabel);
       this.Controls.Add(this.timerLabel);
-      this.Controls.Add(this.label2);
       this.Controls.Add(this.johetAtippelesButton);
       this.Controls.Add(this.tippTextBox);
-      this.Controls.Add(this.label1);
       this.Controls.Add(this.tippelekButton);
       this.Controls.Add(this.kovetkezoButton);
       this.Controls.Add(this.rendszamLabel);
@@ -193,7 +186,7 @@ namespace Rendszamok_Beadando {
       this.MaximizeBox = false;
       this.Name = "JatekForm";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-      this.Text = "Rendszámok";
+      this.Text = "Rendszám memóriajáték";
       this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.JatekForm_FormClosed);
       this.Load += new System.EventHandler(this.JatekForm_Load);
       ((System.ComponentModel.ISupportInitialize)(this.rendszamPictureBox)).EndInit();
@@ -208,13 +201,12 @@ namespace Rendszamok_Beadando {
     private System.Windows.Forms.Label rendszamLabel;
     private System.Windows.Forms.Button kovetkezoButton;
     private System.Windows.Forms.Button tippelekButton;
-    private System.Windows.Forms.Label label1;
     private System.Windows.Forms.TextBox tippTextBox;
     private System.Windows.Forms.Button johetAtippelesButton;
-    private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label timerLabel;
     private System.Windows.Forms.Label ertekelesLabel;
     private System.Windows.Forms.Button ujJatekButton;
     private System.Windows.Forms.Button kilepesButton;
+    private System.Windows.Forms.Label tajekoztatoLabel;
   }
 }

@@ -44,8 +44,8 @@ namespace Rendszamok_Beadando {
       }
       float szazalek = (float)helyes/(float)Mennyit;
       felhasznaltIdo = timerLabel.Text;
-      ertekelesLabel.Text = "Rendszámok: "+Mennyit;
-      ertekelesLabel.Text += "\nTalálat: "+helyes;
+      ertekelesLabel.Text = "Rendszámok: "+Mennyit+" db";
+      ertekelesLabel.Text += "\nTalálat: "+helyes+" db";
       ertekelesLabel.Text += "\nTalálati arány: "+szazalek*100+"%";
       ertekelesLabel.Text += "\nFelhasznált idő: "+felhasznaltIdo;
     }
@@ -59,12 +59,11 @@ namespace Rendszamok_Beadando {
       this.Mennyit = mennyit;
       rendszamok.Add(rendszamSorsol());
       rendszamLabel.Text = rendszamok[0];
-      // teszt
-      label1.Text += rendszamok[0]+"\n"; // teszt
       if (Mennyit == 1) {
         kovetkezoButton.Visible = false;
         johetAtippelesButton.Visible = true;
       }
+      tajekoztatoLabel.Visible = true;
     }
 
     private void kovetkezoButton_Click(object sender, EventArgs e) {
@@ -72,7 +71,7 @@ namespace Rendszamok_Beadando {
         int i = rendszamok.Count;
         rendszamok.Add(rendszamSorsol());
         rendszamLabel.Text = rendszamok[i];
-        label1.Text += rendszamok[i]+"\n";
+        tajekoztatoLabel.Text = (i+1)+". rendszám";
       }
 
       if (rendszamok.Count == Mennyit) {
@@ -86,7 +85,9 @@ namespace Rendszamok_Beadando {
       rendszamLabel.Visible = false;
       johetAtippelesButton.Visible = false;
       tippTextBox.Visible = true;
+      tippTextBox.Focus();
       tippelekButton.Visible = true;
+      tajekoztatoLabel.Text = "Kérem írja be az 1. rendszámot!";
     }
 
     private void JatekForm_FormClosed(object sender, FormClosedEventArgs e) {
@@ -102,21 +103,28 @@ namespace Rendszamok_Beadando {
     }
 
     private void tippelekButton_Click(object sender, EventArgs e) {
+      int kattint = 1;
+      kattint++;
       if (tippek.Count < Mennyit) {
         int i = tippek.Count;
         tippek.Add(tippTextBox.Text);
-        label2.Text += tippek[i]+"\n";
         tippTextBox.Text = "";
+        if (i+1 < Mennyit) {
+          tajekoztatoLabel.Text = "Kérem írja be az "+(tippek.Count+1)+". rendszámot!";
+        }
         if (rendszamok[i].Equals(tippek[i])) {
           MessageBox.Show("Helyes tipp!", "Értékelés", MessageBoxButtons.OK, MessageBoxIcon.Information);
+          tippTextBox.Focus();
         } else {
           MessageBox.Show("Hibás tipp! A helyes rendszám: "+rendszamok[i], "Értékelés", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          tippTextBox.Focus();
         }
       }
 
       if (tippek.Count == Mennyit) {
         tippTextBox.Visible = false;
         tippelekButton.Visible = false;
+        tajekoztatoLabel.Visible = false;
         t.Stop();
         timerLabel.Visible = false;
         ertekelesLabel.Visible = true;

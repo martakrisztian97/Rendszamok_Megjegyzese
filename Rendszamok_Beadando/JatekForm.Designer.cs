@@ -63,6 +63,7 @@ namespace Rendszamok_Beadando {
       // kovetkezoButton
       // 
       this.kovetkezoButton.Cursor = System.Windows.Forms.Cursors.Hand;
+      this.kovetkezoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
       this.kovetkezoButton.Location = new System.Drawing.Point(325, 300);
       this.kovetkezoButton.Name = "kovetkezoButton";
       this.kovetkezoButton.Size = new System.Drawing.Size(150, 50);
@@ -74,6 +75,7 @@ namespace Rendszamok_Beadando {
       // tippelekButton
       // 
       this.tippelekButton.Cursor = System.Windows.Forms.Cursors.Hand;
+      this.tippelekButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
       this.tippelekButton.Location = new System.Drawing.Point(325, 300);
       this.tippelekButton.Name = "tippelekButton";
       this.tippelekButton.Size = new System.Drawing.Size(150, 50);
@@ -99,6 +101,7 @@ namespace Rendszamok_Beadando {
       // johetAtippelesButton
       // 
       this.johetAtippelesButton.Cursor = System.Windows.Forms.Cursors.Hand;
+      this.johetAtippelesButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
       this.johetAtippelesButton.Location = new System.Drawing.Point(325, 300);
       this.johetAtippelesButton.Name = "johetAtippelesButton";
       this.johetAtippelesButton.Size = new System.Drawing.Size(150, 50);
@@ -110,6 +113,7 @@ namespace Rendszamok_Beadando {
       // 
       // timerLabel
       // 
+      this.timerLabel.BackColor = System.Drawing.Color.Transparent;
       this.timerLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
       this.timerLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
       this.timerLabel.Location = new System.Drawing.Point(12, 250);
@@ -121,8 +125,9 @@ namespace Rendszamok_Beadando {
       // 
       // ertekelesLabel
       // 
-      this.ertekelesLabel.BackColor = System.Drawing.SystemColors.Control;
-      this.ertekelesLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+      this.ertekelesLabel.BackColor = System.Drawing.Color.Transparent;
+      this.ertekelesLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.ertekelesLabel.ForeColor = System.Drawing.Color.White;
       this.ertekelesLabel.Location = new System.Drawing.Point(250, 12);
       this.ertekelesLabel.Name = "ertekelesLabel";
       this.ertekelesLabel.Size = new System.Drawing.Size(300, 190);
@@ -133,6 +138,7 @@ namespace Rendszamok_Beadando {
       // ujJatekButton
       // 
       this.ujJatekButton.Cursor = System.Windows.Forms.Cursors.Hand;
+      this.ujJatekButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
       this.ujJatekButton.Location = new System.Drawing.Point(250, 346);
       this.ujJatekButton.Name = "ujJatekButton";
       this.ujJatekButton.Size = new System.Drawing.Size(140, 50);
@@ -145,6 +151,7 @@ namespace Rendszamok_Beadando {
       // kilepesButton
       // 
       this.kilepesButton.Cursor = System.Windows.Forms.Cursors.Hand;
+      this.kilepesButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
       this.kilepesButton.Location = new System.Drawing.Point(400, 346);
       this.kilepesButton.Name = "kilepesButton";
       this.kilepesButton.Size = new System.Drawing.Size(140, 50);
@@ -156,7 +163,9 @@ namespace Rendszamok_Beadando {
       // 
       // tajekoztatoLabel
       // 
+      this.tajekoztatoLabel.BackColor = System.Drawing.Color.Transparent;
       this.tajekoztatoLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+      this.tajekoztatoLabel.ForeColor = System.Drawing.Color.White;
       this.tajekoztatoLabel.Location = new System.Drawing.Point(0, 0);
       this.tajekoztatoLabel.Name = "tajekoztatoLabel";
       this.tajekoztatoLabel.Size = new System.Drawing.Size(800, 47);
@@ -169,6 +178,7 @@ namespace Rendszamok_Beadando {
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
       this.ClientSize = new System.Drawing.Size(800, 450);
       this.Controls.Add(this.tajekoztatoLabel);
       this.Controls.Add(this.kilepesButton);

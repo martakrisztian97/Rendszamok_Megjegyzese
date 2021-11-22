@@ -76,6 +76,7 @@ namespace Rendszamok_Beadando {
       this.Name = "kerdesForm";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "Rendszámok";
+      this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.kerdesForm_FormClosed);
       this.ResumeLayout(false);
       this.PerformLayout();
 

@@ -58,5 +58,9 @@ namespace Rendszamok_Beadando {
         }
       }
     }
+
+    private void kerdesForm_FormClosed(object sender, FormClosedEventArgs e) {
+      Application.Exit();
+    }
   }
 }

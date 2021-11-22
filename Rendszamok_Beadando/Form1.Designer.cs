@@ -53,6 +53,7 @@ namespace Rendszamok_Beadando {
       // 
       // inditasButton
       // 
+      this.inditasButton.Cursor = System.Windows.Forms.Cursors.Hand;
       this.inditasButton.Location = new System.Drawing.Point(150, 141);
       this.inditasButton.Name = "inditasButton";
       this.inditasButton.Size = new System.Drawing.Size(100, 35);

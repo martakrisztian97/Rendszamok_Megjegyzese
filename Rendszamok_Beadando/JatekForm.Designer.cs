@@ -60,6 +60,7 @@ namespace Rendszamok_Beadando {
       // 
       // kovetkezoButton
       // 
+      this.kovetkezoButton.Cursor = System.Windows.Forms.Cursors.Hand;
       this.kovetkezoButton.Location = new System.Drawing.Point(325, 250);
       this.kovetkezoButton.Name = "kovetkezoButton";
       this.kovetkezoButton.Size = new System.Drawing.Size(150, 50);
@@ -70,6 +71,7 @@ namespace Rendszamok_Beadando {
       // 
       // tippelekButton
       // 
+      this.tippelekButton.Cursor = System.Windows.Forms.Cursors.Hand;
       this.tippelekButton.Location = new System.Drawing.Point(325, 250);
       this.tippelekButton.Name = "tippelekButton";
       this.tippelekButton.Size = new System.Drawing.Size(150, 50);
@@ -102,6 +104,7 @@ namespace Rendszamok_Beadando {
       // 
       // johetAtippelesButton
       // 
+      this.johetAtippelesButton.Cursor = System.Windows.Forms.Cursors.Hand;
       this.johetAtippelesButton.Location = new System.Drawing.Point(325, 250);
       this.johetAtippelesButton.Name = "johetAtippelesButton";
       this.johetAtippelesButton.Size = new System.Drawing.Size(150, 50);

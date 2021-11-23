@@ -108,8 +108,6 @@ namespace Rendszamok_Beadando {
     }
 
     private void tippelekButton_Click(object sender, EventArgs e) {
-      int kattint = 1;
-      kattint++;
       if (tippek.Count < Mennyit) {
         int i = tippek.Count;
         tippek.Add(tippTextBox.Text);
@@ -157,8 +155,7 @@ namespace Rendszamok_Beadando {
     }
 
     private void OnTimeEvent(object sender, ElapsedEventArgs e) {
-      Invoke(new Action(() =>
-      {
+      Invoke(new Action(() =>  {
         s += 1;
         if (s == 60) {
           s = 0;
@@ -169,8 +166,10 @@ namespace Rendszamok_Beadando {
           m = 0;
           h += 1;
         }
-        timerLabel.Text = string.Format("{0}:{1}:{2}", h.ToString().PadLeft(2, '0'), m.ToString().PadLeft(2, '0'), s.ToString().PadLeft(2, '0'));
+        timerLabel.Text = string.Format("{0}:{1}:{2}", h.ToString().PadLeft(2, '0'), 
+                          m.ToString().PadLeft(2, '0'), s.ToString().PadLeft(2, '0'));
       }));
     }
+
   }
 }

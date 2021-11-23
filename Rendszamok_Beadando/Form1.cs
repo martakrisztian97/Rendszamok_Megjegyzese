@@ -19,7 +19,6 @@ namespace Rendszamok_Beadando {
         int mennyit = int.Parse(mennyitTextBox.Text);
         this.Hide();
         JatekForm jatekForm = new JatekForm(mennyit);
-        jatekForm.Mennyit = mennyit;
         jatekForm.Show();
       } catch {
         if (mennyitTextBox.Text == "") {
